@@ -1,0 +1,100 @@
+<div>
+  <h3>Tabela de Consultores
+  <button type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal" data-target="#add_consultor_modal"><span class="glyphicon glyphicon-plus"></span> Novo Consultor</button>
+  </h3>
+</div>
+
+<!-- <form name="consultor_form" ng-submit="save()" novalidate>
+  <input type="text" name="nome" placeholder="Nome" ng-model="new.nome" ng-required=true>
+  <input type="text" name="telefone" placeholder="Telefone" ng-model="new.telefone" ng-required=true>
+  <input type="text" name="endereco" placeholder="Endereço" ng-model="new.endereco" ng-required=true>
+  <input type="text" name="cpf" placeholder="CPF" ng-model="new.cpf" ng-required=true>
+  <input type="text" name="comissao" placeholder="Comissão" ng-model="new.comissao" ng-required=true>
+
+  <input type="submit" value="Enviar">
+</form> -->
+
+<!-- <div ng-if="consultores.length === 0">
+  <h3>Nenhum consultor cadastrado na plataforma</h3>
+  <a href="">Cadastrar Consultor</a>
+</div> -->
+
+<div ng-if="consultores.length > 0">
+  <table class="table">
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Endereço</th>
+      <th>CPF</th>
+      <th>Comissão</th>
+      <th>Ações</th>
+    </tr>
+    <tr ng-repeat="consultor in consultores">
+      <td ng-bind="consultor.nome"></td>
+      <td ng-bind="consultor.telefone"></td>
+      <td ng-bind="consultor.endereco"></td>
+      <td ng-bind="consultor.cpf"></td>
+      <td ng-bind="consultor.comissao"></td>
+      <td>
+        <a class="btn btn-success" href="#/consultor/{{consultor.id}}/edit">
+          <span class="glyphicon glyphicon-pencil"> Editar</span>
+        </a>
+        <a class="btn btn-danger" href="#/consultor/{{consultor.id}}/remove">
+          <span class="glyphicon glyphicon-trash"> Excluir</span>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="modal fade" id="add_consultor_modal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4>Adicionar Consultor</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" name="consultor_form" ng-submit="save()" novalidate>
+          <div class="form-group">
+            <label class="col-sm-2" for="novo_nome">Nome</label>
+            <div class="col-sm-10">
+              <input id="novo_nome" class="form-control" type="text" name="nome" placeholder="Nome" ng-model="new.nome" ng-required=true>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2" for="novo_telefone">Telefone</label>
+            <div class="col-sm-10">
+              <input id="novo_telefone" class="form-control" type="text" name="telefone" placeholder="Telefone" ng-model="new.telefone" ng-required=true>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2" for="novo_endereco">Endereço</label>
+            <div class="col-sm-10">
+              <input id="novo_endereco" class="form-control" type="text" name="endereco" placeholder="Endereço" ng-model="new.endereco" ng-required=true>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2" for="novo_cpf">CPF</label>
+            <div class="col-sm-10">
+              <input id="novo_cpf" class="form-control" type="text" name="cpf" placeholder="CPF" ng-model="new.cpf" ng-required=true>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2" for="novo_comissao">Comissão</label>
+            <div class="col-sm-10">
+              <input treta="new.comissao" id="novo_comissao" class="form-control" type="text" name="comissao" placeholder="Comissão" ng-model="new.comissao" ng-required=true>
+            </div>
+          </div>
+
+          <input class="btn btn-primary" type="submit" value="Salvar">
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>

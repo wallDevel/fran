@@ -1,0 +1,79 @@
+rotas
+    vendedor
+        novo -> novo vendedor no banco de dados
+        lista -> listagem de todos os vendedores cadastrados
+            formulário para filtragem
+        editar/:id -> formulário para editar vendedor selecionado
+        deletar/:id -> confirmar remoção do vendedor selecionado
+        detalhar -> detalhes do vendedor selecionado
+            mostrar dados do vendedor
+            mostrar últimas vendas do vendedor (mês atual)
+            formulário para pesquisa de vendas
+                de (date picker)
+                ate (date picker)
+                cliente (select com clientes)
+    empresa
+        nova -> nova empresa
+        lista -> listagem de empresas cadastradas
+            formulário para filtragem
+        editar/:id -> formulario para editar dados da empresa
+        deletar/:id -> confirmar remoção da empresa no sistema
+        detalhar -> detalhes da empresa selecionada
+            mostrar dados da empresa
+            listar produtos desta empresa
+            mostrar últimos pedidos feitos para esta empresa
+            formulário para pesquisa de compras
+                de (date picker)
+                ate (datepicker)
+            formulário para pesquisa de produtos
+                nome
+                codigo
+    cliente
+        novo -> formulario para adicionar cliente
+        lista -> listagem de clientes cadastrados
+            formulário para filtragem
+        editar/:id -> formulario para edicao do cliente selecionado
+        deletar/:id -> confirmar remoção do cliente
+        detalhar -> detalhes do cliente selecionado
+            mostrar dados do cliente
+            mostrar últimos pedidos (mês atual)
+            formulário para pesquisa de pedidos
+                de (datepicker)
+                ate (datepicker)
+    produto
+        novo -> formulario para adicionar produto
+        lista -> lista de produtos cadastrados
+        editar/:id -> formulario para edicao do produto
+        deletar/:id -> confirmar remocao do produto
+        detalhar -> detalhes do produto
+            mostrar dados do produto
+            mostrar dados da empresa que o produto foi cadastrado
+            mostrar quantidade em estoque
+    venda
+        nova -> formulario para cadastro de venda
+        lista -> listagem de vendas
+            formulario para filtragem de vendas
+                nome do vendedor
+                nome do cliente
+                de (datepicker)
+                ate (datepicker)
+        editar/:id -> formulario para edicao da venda
+        deletar/:id -> confirmar remocao da venda
+        detalhar -> detalhes da venda
+            mostrar dados da venda
+            mostrar dados do vendedor
+            mostrar dados do cliente
+            mostrar produtos vendidos
+    pedido
+        novo -> formulario para adição de pedido
+        lista -> listagem de pedidos
+            formulario para filtragem de pedidos
+                nome da empresa
+                de (datepicker)
+                ate (datepicker)
+        editar/:id -> edição de pedido
+        deletar/:id -> remoção de pedido
+        detalhar -> detalhes do pedido
+            mostrar dados do pedido
+            mostrar dados da empresa
+            mostrar produtos pedidos

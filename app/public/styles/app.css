@@ -1,0 +1,15 @@
+.lista{
+  background-color: #fbfbfb;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px;
+  margin-bottom: 10px;
+}
+.lista-title{
+  border-bottom: grey solid 2px;
+  text-align: center;
+}
+
+img{
+  max-width: 100%;
+}

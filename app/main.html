@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+  <meta charset="utf-8">
+  <title>Fran</title>
+
+  <link rel="stylesheet" type="text/css" href="public/components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="public/styles/app.css">
+  <link rel="stylesheet" type="text/css" href="public/components/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="public/components/jquery-ui/jquery-ui.structure.min.css">
+  <link rel="stylesheet" type="text/css" href="public/components/jquery-ui/jquery-ui.theme.min.css">
+
+</head>
+<body ng-controller="mainController">
+  <h1>Hello Guys</h1>
+
+  <!--<ul>
+    <li>
+      <a href="#/consultores">consultores</a>
+    </li>
+    <li>
+      <a href="#/clientes">clientes</a>
+    </li>
+    <li>
+      <a href="#/fornecedores">fornecedores</a>
+    </li>
+    <li>
+      <a href="#/produtos">produtos</a>
+    </li>
+    <li>
+      <a href="#/pedidos">pedidos</a>
+    </li>
+  </ul>-->
+  <ul>
+    <li>
+      <a href="#/consultores">consultores</a>
+    </li>
+    <li>
+      <a href="#/clientes">clientes</a>
+    </li>
+    <li>
+      <a href="#/fornecedores">fornecedores</a>
+    </li>
+    <li>
+      <a href="#/produtos">produtos</a>
+    </li>
+    <li>
+      <a href="#/pedidos">pedidos</a>
+    </li>
+  </ul>
+
+  <div class="container">
+    <div ui-view></div>
+  </div>
+
+  <!-- Insert this line above script imports  -->
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+  <!-- normal script imports etc  -->
+  <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="public/components/jquery-ui/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="public/components/jquery-ui/jquery-ui.pt-br.js"></script>
+  <script type="text/javascript" src="public/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="public/components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="public/components/angular/angular-ui-router.js"></script>
+  <script type="text/javascript" src="public/components/angular/angular-route.min.js"></script>
+  <script type="text/javascript" src="../node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+  <script type="text/javascript" src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+  <script type="text/javascript" src="../node_modules/moment/moment.js"></script>
+  <script type="text/javascript" src="../node_modules/moment/locale/pt-br.js"></script>
+
+
+  <!-- Insert this line after script imports -->
+  <script>
+    if (window.module) module = window.module;
+    // $.datepicker.setDefaults( $.datepicker.regional[ "fr" ] );
+    moment.locale('pt-br')
+  </script>
+
+  <script type="text/javascript" src="public/scripts/app.js"></script>
+  <script type="text/javascript" src="public/scripts/consultor.js"></script>
+  <script type="text/javascript" src="public/scripts/cliente.js"></script>
+  <script type="text/javascript" src="public/scripts/fornecedor.js"></script>
+  <script type="text/javascript" src="public/scripts/produto.js"></script>
+  <script type="text/javascript" src="public/scripts/pedido.js"></script>
+
+</body>
+</html>
